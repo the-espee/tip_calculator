@@ -1,14 +1,15 @@
-meal = 100.00
-tax = .18
-tip = .20
+meal = float(raw_input("What is the base cost of your meal? "))
+tax = float(raw_input("What is the tax rate (as a decimal) on your meal? "))
+tip = float(raw_input("What percentage (as a decimal) would you like to leav\
+e for tip? "))
+
 tax_value = meal * tax
 meal_with_tax = meal + meal * tax
-tip_value = meal_with_tax + tip
-
+tip_value = meal_with_tax * tip
 total = meal_with_tax + tip_value
 
-print "The base cost of the meal is ${0:.2f}." .format(meal)
-print "The tax on the meal is ${0:.2f}." .format(tax_value)
-print "You need to pay ${0:.2f} as your tip." .format(tip_value)
+print "The base cost of your meal is ${0:.2f}.".format(meal)
+print "The tax on your meal is ${0:.2f}.".format(tax)
+print "The tip you should leave is ${0:.2f}.".format(tip_value)
 
-print "The grand total of the meal is ${0:.2f}." .format(total)
+print "The total cost of your meal is ${0:.2f}.".format(total)
